@@ -1,5 +1,7 @@
 package javaTest;
+
 import java.util.Scanner;
+
 public class Test1 {
 
 	public static void main(String[] args) {
@@ -13,5 +15,4 @@ public class Test1 {
 
 		scan.close();
 	}
-
 }
