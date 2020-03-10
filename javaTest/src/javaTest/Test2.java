@@ -13,7 +13,7 @@ public class Test2 {
 			kakaku = 100;
 		}
 		else {
-			kakaku = 500;
+			kakaku = 50000;
 		}
 		System.out.println("価格は" + kakaku + "円です");
 		scanner.close();
