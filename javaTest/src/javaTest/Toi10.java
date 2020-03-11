@@ -6,9 +6,10 @@ public class Toi10 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int flag = 1;
+//		int flag = 1;
+		boolean a = true;
 
-		while (flag == 1) {
+		while (a) {
 
 			System.out.println("モードを選択してください。(1or2):");
 			int mode = scanner.nextInt(); //modeを入力
@@ -17,17 +18,15 @@ public class Toi10 {
 			int umare = scanner.nextInt(); //生まれた歳を入力
 
 			if (mode == 1) {
-				System.out.println("調べたい年を西暦で入力してください");
-				int year = scanner.nextInt(); //調べたい年を入力
-				int nenrei = year - umare;
-				System.out.println("西暦" + year + "年の時、あなたは" + nenrei + "歳です");
-				flag = 0;
+				//モード1の場合、西暦から年齢を求める
+				Toi10Sub mondai = new Toi10Sub();
+				mondai.age(umare);
+				a = false;
 			} else if (mode == 2) {
-				System.out.println("調べたい年齢を入力してください");
-				int nenrei = scanner.nextInt(); //調べたいm年齢を入力
-				int year = nenrei + umare;
-				System.out.println("あなたが" + nenrei + "歳の時は西暦は" + year + "年です");
-				flag = 0;
+				//モード2の場合、年齢から西暦を求める。
+				Toi10Sub1 mondai1 = new Toi10Sub1();
+				mondai1.seireki(umare);
+				a = false;
 			} else {
 				System.out.println("正しいモードが入力されませんでした。もう一度入力してください");
 			}
