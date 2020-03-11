@@ -4,19 +4,20 @@ import java.util.Scanner;
 
 public class PokemonPoppo {
 	Scanner scanner = new Scanner(System.in);
+	Pokemonmoto Pop = new Pokemonmoto();
 
-	int level = 1;
 	String name = "ポッポ";
 
 	public int levelup(int a) {
-		level = level + a;
+		Pop.setLevel(3);
+		int level = Pop.getLevel() + a;
 		System.out.println(name + "のレベルが" + level + "に上がった");
 		return level;
 	}
 
 	public String shinka(int level) {
 		if (level < 10) {
-			name = "pop";
+			name = "ポッポ";
 		} else if (level < 20) {
 			System.out.println("進化させますか？　[yes=1] or [no=2]: ");
 			int yes = scanner.nextInt();

@@ -12,13 +12,12 @@ public class Pokemon {
 		System.out.println("何レベルあげますか？");
 		int a = scanner.nextInt(); //上げるレベルを入力
 
-		level = torisan.levelup(a);
-		//レベル上げの処理
+		level = torisan.levelup(a);//レベル上げの処理
 
-		name = torisan.shinka(a);
-		//進化の処理
+		name = torisan.shinka(a);//進化の処理
 
 		System.out.println(name + "はレベル" + level + "です");
+		System.out.println("--------------------");
 		System.out.println("正常に動作が終了しました。");
 		scanner.close();
 	}
